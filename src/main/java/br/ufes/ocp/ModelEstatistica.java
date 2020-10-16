@@ -9,7 +9,7 @@ import java.util.Collections;
  * 
  * Este Exemplo foi retirado do caderno de exercícios.
  */
-public class Estatistica implements IMetodosEstatistica {
+public class ModelEstatistica implements IMetodosEstatistica {
 
     private static final int MEDIA = 0;
     private static final int SOMATORIO = 1;
@@ -21,25 +21,25 @@ public class Estatistica implements IMetodosEstatistica {
 
     @Override
     public double calcula(int op, ArrayList<Double> numeros) {
-        if (op == Estatistica.MEDIA) {
+        if (op == ModelEstatistica.MEDIA) {
             double total = 0;
             for (int i = 0; i < numeros.size(); i++) {
                 total += numeros.get(i);
             }
             return total / numeros.size();
-        } else if (op == Estatistica.SOMATORIO) {
+        } else if (op == ModelEstatistica.SOMATORIO) {
             return getSomaDosElementos(numeros);
 
-        } else if (op == Estatistica.MAIOR) {
+        } else if (op == ModelEstatistica.MAIOR) {
             return Collections.max(numeros);
-        } else if (op == Estatistica.MENOR) {
+        } else if (op == ModelEstatistica.MENOR) {
             return Collections.min(numeros);
-        } else if (op == Estatistica.VARIANCIA) {
+        } else if (op == ModelEstatistica.VARIANCIA) {
             double p1 = 1 / Double.valueOf(numeros.size() - 1);
             double p2 = getSomaDosElementosAoQuadrado(numeros) - (Math.pow(getSomaDosElementos(numeros),
                     2) / Double.valueOf(numeros.size()));
             return p1 * p2;
-        } else if (op == Estatistica.DESVIOPADRAO) {
+        } else if (op == ModelEstatistica.DESVIOPADRAO) {
             double p1 = 1 / Double.valueOf(numeros.size() - 1);
             double p2 = getSomaDosElementosAoQuadrado(numeros) - (Math.pow(getSomaDosElementos(numeros), 2)
                     / Double.valueOf(numeros.size()));
