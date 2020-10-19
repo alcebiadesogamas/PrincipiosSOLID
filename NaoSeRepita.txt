@@ -1,0 +1,3 @@
+Eu entendo que o objetivo deste princípio é ajudar o programador a não ter repetir o mesmo trecho de código em
+varias e diferentes partes de projeto. Fazer esse tipo de abordagem, ou seja, repetir código pode dificultar
+a realização de futuras manutenções.
